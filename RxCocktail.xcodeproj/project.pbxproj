@@ -22,6 +22,12 @@
 		94F4143B277C545500441118 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4143A277C545500441118 /* AppFlow.swift */; };
 		94F4143D277C550A00441118 /* TestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4143C277C550A00441118 /* TestStep.swift */; };
 		94F4143F277C9AB700441118 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4143E277C9AB700441118 /* MainFlow.swift */; };
+		94F41441277C9BFD00441118 /* CocktailListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41440277C9BFD00441118 /* CocktailListFlow.swift */; };
+		94F41445277CA07200441118 /* CocktailListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41444277CA07200441118 /* CocktailListVC.swift */; };
+		94F41447277CA08800441118 /* CocktailListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41446277CA08800441118 /* CocktailListReactor.swift */; };
+		94F4144C277CA32700441118 /* baseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4144B277CA32700441118 /* baseVC.swift */; };
+		94F41450277CA47100441118 /* CocktailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4144F277CA47100441118 /* CocktailListCell.swift */; };
+		94F41452277CA72800441118 /* baseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41451277CA72800441118 /* baseTableViewCell.swift */; };
 		9E3B680DB55163212C0D9611 /* Pods_RxCocktail_RxCocktailUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6CB4C8519D778A9FAD3B92D /* Pods_RxCocktail_RxCocktailUITests.framework */; };
 		D873C8E933AD916020A2EDB6 /* Pods_RxCocktail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BED3DC33730A8E5729164C2 /* Pods_RxCocktail.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +73,12 @@
 		94F4143A277C545500441118 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		94F4143C277C550A00441118 /* TestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStep.swift; sourceTree = "<group>"; };
 		94F4143E277C9AB700441118 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
+		94F41440277C9BFD00441118 /* CocktailListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListFlow.swift; sourceTree = "<group>"; };
+		94F41444277CA07200441118 /* CocktailListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListVC.swift; sourceTree = "<group>"; };
+		94F41446277CA08800441118 /* CocktailListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListReactor.swift; sourceTree = "<group>"; };
+		94F4144B277CA32700441118 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
+		94F4144F277CA47100441118 /* CocktailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListCell.swift; sourceTree = "<group>"; };
+		94F41451277CA72800441118 /* baseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseTableViewCell.swift; sourceTree = "<group>"; };
 		B410BFEDDCD7AE3603961E59 /* Pods_RxCocktailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCocktailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18E0B113DC85C65CFCE7816 /* Pods-RxCocktailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxCocktailTests.release.xcconfig"; path = "Target Support Files/Pods-RxCocktailTests/Pods-RxCocktailTests.release.xcconfig"; sourceTree = "<group>"; };
 		E6CB4C8519D778A9FAD3B92D /* Pods_RxCocktail_RxCocktailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxCocktail_RxCocktailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,8 +162,11 @@
 			isa = PBXGroup;
 			children = (
 				94F41427277C48B100441118 /* Common */,
+				94F41448277CA30400441118 /* Base */,
 				94F41431277C504200441118 /* Network */,
 				94F41437277C53C800441118 /* Flow */,
+				94F41442277CA02D00441118 /* Main */,
+				94F4144D277CA43C00441118 /* View */,
 				94F41425277C47F000441118 /* Resource */,
 				94F41424277C47E500441118 /* App */,
 				94F41426277C47FF00441118 /* Support */,
@@ -266,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				94F4143E277C9AB700441118 /* MainFlow.swift */,
+				94F41440277C9BFD00441118 /* CocktailListFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -276,6 +292,40 @@
 				94F4143C277C550A00441118 /* TestStep.swift */,
 			);
 			path = Steps;
+			sourceTree = "<group>";
+		};
+		94F41442277CA02D00441118 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94F41444277CA07200441118 /* CocktailListVC.swift */,
+				94F41446277CA08800441118 /* CocktailListReactor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		94F41448277CA30400441118 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				94F4144B277CA32700441118 /* baseVC.swift */,
+				94F41451277CA72800441118 /* baseTableViewCell.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		94F4144D277CA43C00441118 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94F4144E277CA44900441118 /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		94F4144E277CA44900441118 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				94F4144F277CA47100441118 /* CocktailListCell.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -518,13 +568,19 @@
 			files = (
 				94F4143B277C545500441118 /* AppFlow.swift in Sources */,
 				94F41436277C521D00441118 /* NetworkManager.swift in Sources */,
+				94F41447277CA08800441118 /* CocktailListReactor.swift in Sources */,
 				94F41430277C501D00441118 /* StepEx.swift in Sources */,
+				94F41441277C9BFD00441118 /* CocktailListFlow.swift in Sources */,
+				94F41452277CA72800441118 /* baseTableViewCell.swift in Sources */,
 				94F41434277C506A00441118 /* CocktailAPI.swift in Sources */,
 				94F413F5277C47D300441118 /* AppDelegate.swift in Sources */,
 				94F4143F277C9AB700441118 /* MainFlow.swift in Sources */,
+				94F4144C277CA32700441118 /* baseVC.swift in Sources */,
+				94F41445277CA07200441118 /* CocktailListVC.swift in Sources */,
 				94F4143D277C550A00441118 /* TestStep.swift in Sources */,
 				94F413F7277C47D300441118 /* SceneDelegate.swift in Sources */,
 				94F4142A277C48F700441118 /* Cocktail.swift in Sources */,
+				94F41450277CA47100441118 /* CocktailListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

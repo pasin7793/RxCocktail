@@ -14,12 +14,12 @@ enum CocktailAPI{
 extension CocktailAPI: TargetType{
     
     var baseURL: URL{
-        return URL(string: "www.thecocktaildb.com")!
+        return URL(string: "www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita")!
     }
     var path: String{
         switch self {
         case .getCocktail:
-            return "/api/json/v1/1/search.php?f=a"
+            return ""
         }
     }
     

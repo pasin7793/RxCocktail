@@ -8,7 +8,7 @@
 import RxFlow
 import RxRelay
 
-struct MovieListStepper: Stepper{
+struct CockTailListStepper: Stepper{
     let steps: PublishRelay<Step> = .init()
     
     var initialStep: Step{
@@ -21,11 +21,11 @@ final class CocktailListFlow: Flow{
         return self.rootVC
     }
     
-    let stepper: CocktailListFlow
+    let stepper: CockTailListStepper
     private let rootVC = UINavigationController()
     
     init(
-        with stepper: CocktailListFlow
+        with stepper: CockTailListStepper
     ){
         self.stepper = stepper
     }
@@ -44,9 +44,11 @@ final class CocktailListFlow: Flow{
     }
 }
 
-private extension MovieListStepper{
+private extension CocktailListFlow{
     func coordinateToCocktailList() -> FlowContributors{
         let reactor = CocktailListReactor()
-        let vc = cock
+        let vc = CocktialListVC(reactor: reactor)
+        self.rootVC.pushViewController(vc, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: vc, withNextStepper: reactor))
     }
 }

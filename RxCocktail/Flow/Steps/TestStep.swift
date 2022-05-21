@@ -12,8 +12,5 @@ enum TestStep: Step{
     case alert(title: String?, message: String?)
     case dismiss
     
-    case mainTabbarIsRequired
-    
     case cocktailListIsRequired
-    case cocktailItemPicked(withID: String)
 }

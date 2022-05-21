@@ -21,7 +21,6 @@
 		94F41436277C521D00441118 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41435277C521D00441118 /* NetworkManager.swift */; };
 		94F4143B277C545500441118 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4143A277C545500441118 /* AppFlow.swift */; };
 		94F4143D277C550A00441118 /* TestStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4143C277C550A00441118 /* TestStep.swift */; };
-		94F4143F277C9AB700441118 /* MainFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F4143E277C9AB700441118 /* MainFlow.swift */; };
 		94F41441277C9BFD00441118 /* CocktailListFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41440277C9BFD00441118 /* CocktailListFlow.swift */; };
 		94F41445277CA07200441118 /* CocktailListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41444277CA07200441118 /* CocktailListVC.swift */; };
 		94F41447277CA08800441118 /* CocktailListReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F41446277CA08800441118 /* CocktailListReactor.swift */; };
@@ -72,7 +71,6 @@
 		94F41435277C521D00441118 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		94F4143A277C545500441118 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		94F4143C277C550A00441118 /* TestStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestStep.swift; sourceTree = "<group>"; };
-		94F4143E277C9AB700441118 /* MainFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainFlow.swift; sourceTree = "<group>"; };
 		94F41440277C9BFD00441118 /* CocktailListFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListFlow.swift; sourceTree = "<group>"; };
 		94F41444277CA07200441118 /* CocktailListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListVC.swift; sourceTree = "<group>"; };
 		94F41446277CA08800441118 /* CocktailListReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailListReactor.swift; sourceTree = "<group>"; };
@@ -270,8 +268,8 @@
 		94F41437277C53C800441118 /* Flow */ = {
 			isa = PBXGroup;
 			children = (
-				94F41438277C53D100441118 /* Flows */,
 				94F41439277C544300441118 /* Steps */,
+				94F41438277C53D100441118 /* Flows */,
 				94F4143A277C545500441118 /* AppFlow.swift */,
 			);
 			path = Flow;
@@ -280,7 +278,6 @@
 		94F41438277C53D100441118 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				94F4143E277C9AB700441118 /* MainFlow.swift */,
 				94F41440277C9BFD00441118 /* CocktailListFlow.swift */,
 			);
 			path = Flows;
@@ -574,7 +571,6 @@
 				94F41452277CA72800441118 /* baseTableViewCell.swift in Sources */,
 				94F41434277C506A00441118 /* CocktailAPI.swift in Sources */,
 				94F413F5277C47D300441118 /* AppDelegate.swift in Sources */,
-				94F4143F277C9AB700441118 /* MainFlow.swift in Sources */,
 				94F4144C277CA32700441118 /* baseVC.swift in Sources */,
 				94F41445277CA07200441118 /* CocktailListVC.swift in Sources */,
 				94F4143D277C550A00441118 /* TestStep.swift in Sources */,

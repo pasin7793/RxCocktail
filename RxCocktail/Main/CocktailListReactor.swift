@@ -16,7 +16,7 @@ final class CocktailListReactor: Reactor,Stepper{
     private let disposeBag = DisposeBag()
     
     enum Action{
-        case fetchCocktail(String)
+        case fetchCocktail
     }
     enum Mutation{
         case setCocktail([drinks])

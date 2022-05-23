@@ -11,5 +11,8 @@ import SnapKit
 import Kingfisher
 
 final class CocktailListCell: UITableViewCell{
-     
+    static let identifier = "CocktailList"
+    
+    private lazy var drinkName = UILabel()
+    private lazy var drinkImage = 
 }

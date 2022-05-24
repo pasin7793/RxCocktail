@@ -43,6 +43,7 @@ final class CocktialListVC: baseVC<CocktailListReactor>{
             .bind(to: self.tableView.rx.items(cellIdentifier: CocktailListCell.identifier, cellType: CocktailListCell.self)) { index, element, cell in
                 cell.model = element
             }
+        
             .disposed(by: disposeBag)
     }
 }

@@ -28,14 +28,28 @@ final class CocktailListReactor: Reactor,Stepper{
     
 }
 
-extension CocktailListFlow{
+extension CocktailListReactor{
     func mutate(action: Action) -> Observable<Mutation>{
         switch action {
-        case let .fetchCocktail(query):
-            return fetchCocktail(query: query)
+        case .fetchCocktail:
+            return fetchCocktail()
+        default:
+            return .empty()
         }
     }
 }
-extension CocktailListFlow{
-    func reduce()
+extension CocktailListReactor{
+    func fetchCocktail() -> Observable<Mutation>{
+        return NetworkManager.shared.getCocktail(query: <#T##String#>)
+            .filterSuccessfulStatusCodes()
+            .map(AirQualityResponse.self)
+            .map{ $0.response.body.items ?? [] }
+            .catch { [weak self] err in
+                print(err.localizedDescription)
+                self?.steps.accept(TestStep.alert(title: "DustInGwangju", message: "몰?루"))
+                return .never()
+            }
+            .asObservable()
+            .map {Mutation.setAirQuality($0)}
+    }
 }

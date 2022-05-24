@@ -9,7 +9,7 @@ import Moya
 import RxSwift
 
 protocol NetworkManagerType: class{
-    func getCocktail(query: String) -> Observable<Response>
+    func getCocktail() -> Observable<Response>
 }
 
 final class NetworkManager: NetworkManagerType{
@@ -17,7 +17,7 @@ final class NetworkManager: NetworkManagerType{
     var provider: MoyaProvider<CocktailAPI> = .init()
     static let shared = NetworkManager()
     
-    func getCocktail(query: String) -> Observable<Response> {
-        return provider.rx.request(.getCocktail(query), callbackQueue: .main).asObservable()
+    func getCocktail() -> Observable<Response> {
+        return provider.rx.request(.getCocktail, callbackQueue: .main).asObservable()
     }
 }

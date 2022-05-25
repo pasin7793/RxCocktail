@@ -40,16 +40,16 @@ extension CocktailListReactor{
 }
 extension CocktailListReactor{
     func fetchCocktail() -> Observable<Mutation>{
-        return NetworkManager.shared.getCocktail(query: <#T##String#>)
+        return NetworkManager.shared.getCocktail()
             .filterSuccessfulStatusCodes()
-            .map(AirQualityResponse.self)
-            .map{ $0.response.body.items ?? [] }
+            .map(drinksResponse.self)
+            .map{ $0.response }
             .catch { [weak self] err in
                 print(err.localizedDescription)
                 self?.steps.accept(TestStep.alert(title: "DustInGwangju", message: "몰?루"))
                 return .never()
             }
             .asObservable()
-            .map {Mutation.setAirQuality($0)}
+            .map {Mutation.setCocktail($0)}
     }
 }

@@ -8,7 +8,7 @@
 import Moya
 
 enum CocktailAPI{
-    case getCocktail(String)
+    case getCocktail
 }
 
 extension CocktailAPI: TargetType{
@@ -31,8 +31,8 @@ extension CocktailAPI: TargetType{
     }
     var task: Task{
         switch self {
-        case let .getCocktail(query):
-            return .requestParameters(parameters: ["query":query], encoding: URLEncoding.queryString)
+        case .getCocktail:
+            return .requestPlain
         }
     }
     var headers: [String : String]? {

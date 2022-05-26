@@ -12,14 +12,14 @@ import RxCocoa
 
 final class CocktailListReactor: Reactor,Stepper{
     
+    private let disposeBag: DisposeBag = .init()
     var steps: PublishRelay<Step> = .init()
-    private let disposeBag = DisposeBag()
     
     enum Action{
         case fetchCocktail
     }
     enum Mutation{
-        case setCocktail([drinks])
+        case setCocktail(_ drinks: [drinks])
     }
     struct State{
         var cockTails: [drinks] = []
@@ -46,7 +46,7 @@ extension CocktailListReactor{
             .map{ $0.response }
             .catch { [weak self] err in
                 print(err.localizedDescription)
-                self?.steps.accept(TestStep.alert(title: "DustInGwangju", message: "몰?루"))
+                self?.steps.accept(TestStep.alert(title: "에러", message: "칵테일이 없다잉?"))
                 return .never()
             }
             .asObservable()

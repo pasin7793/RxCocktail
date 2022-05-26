@@ -13,12 +13,13 @@ final class CocktailListCell: BaseTableViewCell<drinks>{
     static let identifier = "CocktailList"
     
     private lazy var drinkName = UILabel()
-    //private lazy var drinkImage =
     private lazy var category = UILabel()
     private lazy var glass = UILabel()
     
     override func configureCell(){
         super.configureCell()
+        addView()
+        setLayout()
     }
     private func addView(){
         [drinkName, category, glass].forEach{ addSubview($0) }

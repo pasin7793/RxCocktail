@@ -121,6 +121,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		94703B01283DF048004AAE42 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				94F41444277CA07200441118 /* CocktailListVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		94703B02283DF057004AAE42 /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+				94F41446277CA08800441118 /* CocktailListReactor.swift */,
+			);
+			path = Reactor;
+			sourceTree = "<group>";
+		};
 		94A72D213F8B2A6BCE00C766 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +180,6 @@
 				94F41431277C504200441118 /* Network */,
 				94F41437277C53C800441118 /* Flow */,
 				94F41442277CA02D00441118 /* Main */,
-				94F4144D277CA43C00441118 /* View */,
 				94F41425277C47F000441118 /* Resource */,
 				94F41424277C47E500441118 /* App */,
 				94F41426277C47FF00441118 /* Support */,
@@ -294,8 +309,9 @@
 		94F41442277CA02D00441118 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				94F41444277CA07200441118 /* CocktailListVC.swift */,
-				94F41446277CA08800441118 /* CocktailListReactor.swift */,
+				94F4144D277CA43C00441118 /* View */,
+				94703B02283DF057004AAE42 /* Reactor */,
+				94703B01283DF048004AAE42 /* VC */,
 			);
 			path = Main;
 			sourceTree = "<group>";

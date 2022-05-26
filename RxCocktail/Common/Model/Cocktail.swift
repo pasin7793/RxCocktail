@@ -14,7 +14,6 @@ struct drinksResponse: Codable{
 
 struct drinks: Codable{
     let strDrink: String
-    let strDrinkThumb: String
     let strCategory: String
     let strGlass: String
 }

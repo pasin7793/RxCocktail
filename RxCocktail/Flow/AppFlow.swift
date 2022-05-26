@@ -39,7 +39,7 @@ final class AppFlow: Flow{
         
         switch step {
         case .cocktailListIsRequired:
-            return coordinateToDust()
+            return coordinateToCockTailList()
         default:
             return .none
         }
@@ -47,7 +47,7 @@ final class AppFlow: Flow{
 }
 
 private extension AppFlow{
-    func coordinateToDust() -> FlowContributors{
+    func coordinateToCockTailList() -> FlowContributors{
         let flow = CocktailListFlow(with: .init())
         Flows.use(flow, when: .created){ [unowned self] root in
             self.rootWindow.rootViewController = root

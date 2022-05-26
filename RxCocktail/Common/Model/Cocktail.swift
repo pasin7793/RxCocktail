@@ -8,10 +8,6 @@
 import Foundation
 import UIKit
 
-struct drinksResponse: Codable{
-    let response: [drinks]
-}
-
 struct drinks: Codable{
     let strDrink: String
     let strCategory: String

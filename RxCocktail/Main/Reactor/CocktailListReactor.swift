@@ -39,11 +39,21 @@ extension CocktailListReactor{
     }
 }
 extension CocktailListReactor{
+    func reduce(state: State, mutation: Mutation) -> State {
+        var newState = state
+        switch mutation {
+        case let .setCocktail(drinks):
+            newState.cockTails = drinks
+        }
+        return newState
+    }
+}
+
+extension CocktailListReactor{
     func fetchCocktail() -> Observable<Mutation>{
         return NetworkManager.shared.getCocktail()
             .filterSuccessfulStatusCodes()
-            .map(drinksResponse.self)
-            .map{ $0.response }
+            .map([drinks].self)
             .catch { [weak self] err in
                 print(err.localizedDescription)
                 self?.steps.accept(TestStep.alert(title: "에러", message: "칵테일이 없다잉?"))

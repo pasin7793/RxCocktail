@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SnapKit
 
-final class CocktailListCell: BaseTableViewCell<drinks>{
+final class CocktailListCell: BaseTableViewCell<    drinks>{
     static let identifier = "CocktailList"
     
     private lazy var drinkName = UILabel()

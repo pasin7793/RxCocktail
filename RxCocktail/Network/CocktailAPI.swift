@@ -19,7 +19,7 @@ extension CocktailAPI: TargetType{
     var path: String{
         switch self {
         case .getCocktail:
-            return "/"
+            return ""
         }
     }
     

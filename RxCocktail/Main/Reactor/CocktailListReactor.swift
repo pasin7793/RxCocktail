@@ -5,14 +5,13 @@
 //  Created by 임준화 on 2021/12/29.
 //
 
-import Foundation
 import ReactorKit
 import RxFlow
 import RxCocoa
 
 final class CocktailListReactor: Reactor,Stepper{
     
-    private let disposeBag: DisposeBag = .init()
+    private let disposeBag = DisposeBag()
     var steps: PublishRelay<Step> = .init()
     
     enum Action{
@@ -22,7 +21,7 @@ final class CocktailListReactor: Reactor,Stepper{
         case setCocktail(_ drinks: [drinks])
     }
     struct State{
-        var cockTails: [drinks] = []
+        var cockTails: [drinks]?
     }
     var initialState: State = State()
     
